@@ -6,7 +6,7 @@
 #
 # Before building the container image run:
 #
-# ./gradlew build -Dquarkus.package.type=native
+# ./gradlew build -Dquarkus.native.enabled=true
 #
 # Then, build the image with:
 #
@@ -24,7 +24,8 @@ RUN chown 1001 /work \
     && chown 1001:root /work
 COPY --chown=1001:root build/*-runner /work/application
 
-EXPOSE 8080
+EXPOSE 8080/tcp 8443/tcp 5005/tcp
+EXPOSE 7800/tcp 7555/tcp
 USER 1001
 
 ENTRYPOINT ["./application", "-Dquarkus.http.host=0.0.0.0"]
