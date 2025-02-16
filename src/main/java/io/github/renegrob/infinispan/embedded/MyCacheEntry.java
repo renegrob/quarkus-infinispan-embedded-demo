@@ -16,12 +16,12 @@ public class MyCacheEntry {
         this.value = value;
     }
 
-    @ProtoField(number = 1, required = true)
+    @ProtoField(number = 1)
     public Instant getCreatedAt() {
         return createdAt;
     }
 
-    @ProtoField(number = 2, required = true)
+    @ProtoField(number = 2)
     public String getValue() {
         return value;
     }

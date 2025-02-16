@@ -14,6 +14,7 @@ public class CDICacheEntryModifiedEvent<K, V> implements CacheEntryModifiedEvent
 
     @Override
     @Deprecated
+    @SuppressWarnings({"deprecation", "removal"})
     public V getValue() {
         return delegate.getValue();
     }
