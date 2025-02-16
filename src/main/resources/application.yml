@@ -1,6 +1,4 @@
-greeting:
-  message: "hello"
-
 quarkus:
   infinispan-embedded:
     xml-config: infinispan-tcp-unencrypted.xml
+    clustered: true
